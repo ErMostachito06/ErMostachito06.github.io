@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Web Navideña Flipante</title>
+  <style>
+    /* Reset de márgenes y padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Fondo animado de Navidad */
+    body {
+      background: url('https://source.unsplash.com/1920x1080/?christmas') no-repeat center center fixed;
+      background-size: cover;
+      animation: gradientAnimation 10s ease infinite;
+      color: #fff;
+    }
+
+    /* Animación del fondo */
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Contenedor principal */
+    .container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    /* Título navideño */
+    h1 {
+      font-size: 4em;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      animation: textAnimation 3s ease-out forwards;
+      text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7);
+    }
+
+    /* Animación de texto */
+    @keyframes textAnimation {
+      0% {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Mensaje navideño */
+    .message {
+      font-size: 1.5em;
+      margin-top: 20px;
+      animation: fadeIn 4s ease-in-out;
+    }
+
+    /* Animación de aparición */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Botón interactivo */
+    .btn {
+      margin-top: 30px;
+      padding: 15px 40px;
+      font-size: 1.2em;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid #fff;
+      color: #fff;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    /* Efecto hover en el botón */
+    .btn:hover {
+      background-color: #ff4d4d;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    /* Efecto parallax con imagen navideña */
+    .parallax {
+      background-image: url('https://source.unsplash.com/1920x1080/?snow,christmas-tree');
+      height: 500px;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .parallax h2 {
+      font-size: 2.5em;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      text-align: center;
+    }
+
+    /* Efectos de nieve */
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      color: #fff;
+      font-size: 2em;
+      animation: snow 5s linear infinite;
+    }
+
+    /* Animación de nieve */
+    @keyframes snow {
+      0% {
+        transform: translateY(-10px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+
+    .snowflake:nth-child(1) { left: 10%; animation-duration: 4s; }
+    .snowflake:nth-child(2) { left: 20%; animation-duration: 5s; animation-delay: 1s; }
+    .snowflake:nth-child(3) { left: 30%; animation-duration: 6s; }
+    .snowflake:nth-child(4) { left: 40%; animation-duration: 3s; animation-delay: 2s; }
+    .snowflake:nth-child(5) { left: 50%; animation-duration: 5s; }
+    .snowflake:nth-child(6) { left: 60%; animation-duration: 4s; animation-delay: 1.5s; }
+    .snowflake:nth-child(7) { left: 70%; animation-duration: 6s; animation-delay: 0.5s; }
+    .snowflake:nth-child(8) { left: 80%; animation-duration: 5s; animation-delay: 2.5s; }
+    .snowflake:nth-child(9) { left: 90%; animation-duration: 3s; animation-delay: 1s; }
+
+  </style>
+</head>
+<body>
+
+  <!-- Efecto parallax -->
+  <div class="parallax">
+    <h2>¡Feliz Navidad y Próspero Año Nuevo!</h2>
+  </div>
+
+  <!-- Contenedor principal -->
+  <div class="container">
+    <h1>Bienvenido a nuestra Página Navideña</h1>
+    <div class="message">
+      ¡Disfruta de la magia de la Navidad! 🌟🎄
+    </div>
+    <button class="btn" onclick="alert('¡Gracias por visitar nuestra web navideña! 🎅🎁')">Haz clic para más sorpresas</button>
+  </div>
+
+  <!-- Efecto de nieve -->
+  <div class="snowflake">❄️</div>
+  <div class="snowflake">❄️</div>
+  <div class="snowflake">❄️</div>
+  <div class="snowflake">❄️</div>
+  <div class="snowflake">❄️</div>
+  <div class="snowflake">❄️</div>
+  <div class="snowflake">❄️</div>
+  <div class="snowflake">❄️</div>
+  <div class="snowflake">❄️</div>
+
+</body>
+</html>
